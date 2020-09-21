@@ -15,7 +15,8 @@ spec:
       containers:
       - name: mvc
         # image: houssemdocker/mvc-app:1.0 
-        image: ACR_NAME/DOCKER_IMAGE:TAG
+        # image: ACR_NAME/DOCKER_IMAGE:TAG
+        image: myacr99.azurecr.io/mvc-app:#{Build.BuildId}#
         # image: __ACR_NAME__.azurecr.io/__DOCKER_IMAGE__:__TAG__
         ports:
         - containerPort: 80
@@ -30,11 +31,11 @@ spec:
           - name: ConnectionStrings__ProductsContext
             valueFrom:
               configMapKeyRef:
-                name: mssql-connection-configmap
-                key: db-connection-string
-        #     secretKeyRef:
-        #       name: mssql-secret
-        #       key: db-connection-string-secret
+        #       name: mssql-connection-configmap
+        #       key: db-connection-string
+              secretKeyRef:
+                name: mssql-secret
+                key: db-connection-string-secret
 ---
 kind: Service
 apiVersion: v1
