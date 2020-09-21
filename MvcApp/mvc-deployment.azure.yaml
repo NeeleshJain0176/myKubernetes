@@ -34,8 +34,8 @@ spec:
                 name: mssql-secret
                 key: db-connection-string-secret
 ---
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   name: mvc-service
 spec:
@@ -45,4 +45,4 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 80
-  type: LoadBalancer #NodePort
+  type: LoadBalancer
