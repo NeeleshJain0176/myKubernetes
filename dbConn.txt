@@ -1,0 +1,5 @@
+az aks get-credentials --resource-group EPAM --name myKubernetes
+
+
+db-connection-string-secret: U2VydmVyPW1zc3FsLXNlcnZpY2U7RGF0YWJhc2U9UHJvZGN1dHNEQjtVc2VyPVNBO1Bhc3N3b3JkPUBBYTEyMzQ1Njs=
+Server=mssql-service;Database=ProdcutsDB;User=SA;Password=@Aa123456;
