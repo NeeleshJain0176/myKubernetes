@@ -6,5 +6,10 @@ provider "azurerm" {
 }
 
 terraform {
-    backend "azurerm" {}
+    backend "azurerm" {
+        resource_group_name = "EPAM"    
+        storage_account_name = "azureclistorageacct"
+        container_name = "tfsstatecontainer"
+        key = "k8s-terraform.tfstate"
+    }
 }
