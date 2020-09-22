@@ -79,8 +79,9 @@ resource "azurerm_kubernetes_cluster_node_pool" "mssql" {
   tags = {
     Environment = "Development"
   }
+}
 
-  resource "azurerm_kubernetes_cluster_node_pool" "mvc" {
+resource "azurerm_kubernetes_cluster_node_pool" "mvc" {
   name                  = "mvc"
   kubernetes_cluster_id = azurerm_kubernetes_cluster.k8s.id
   vm_size               = "Standard_B2s"
