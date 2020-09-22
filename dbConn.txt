@@ -11,7 +11,7 @@ Server=mssql-service;Database=ProdcutsDB;User=SA;Password=@Aa123456;
 az aks update -n myKubernetes -g EPAM --attach-acr myACR99
 
 
-az aks get-credentials --resource-group EPAM --name myKubernetes
+az aks get-credentials --resource-group EPAM1 --name myKubernetes
 
 kubectl expose deployments mvc-deployment --port=80 --type=LoadBalancer
 
