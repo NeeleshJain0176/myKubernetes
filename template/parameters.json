@@ -1,0 +1,69 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "resourceName": {
+            "value": "myKubernetes"
+        },
+        "location": {
+            "value": "centralindia"
+        },
+        "dnsPrefix": {
+            "value": "myKubernetes-dns"
+        },
+        "kubernetesVersion": {
+            "value": "1.17.9"
+        },
+        "networkPlugin": {
+            "value": "azure"
+        },
+        "enableRBAC": {
+            "value": true
+        },
+        "servicePrincipalClientId": {
+            "value": null
+        },
+        "servicePrincipalClientSecret": {
+            "value": null
+        },
+        "enablePrivateCluster": {
+            "value": false
+        },
+        "aadSessionKey": {
+            "value": null
+        },
+        "enableHttpApplicationRouting": {
+            "value": true
+        },
+        "enableAzurePolicy": {
+            "value": false
+        },
+        "vmssNodePool": {
+            "value": true
+        },
+        "vnetSubnetID": {
+            "value": "/subscriptions/99a1e7d2-cab0-45e1-b62b-2df7b3101d90/resourceGroups/EPAM/providers/Microsoft.Network/virtualNetworks/EPAM-vnet/subnets/default"
+        },
+        "serviceCidr": {
+            "value": "10.0.0.0/16"
+        },
+        "dnsServiceIP": {
+            "value": "10.0.0.10"
+        },
+        "dockerBridgeCidr": {
+            "value": "172.17.0.1/16"
+        },
+        "principalId": {
+            "value": "9c88c44a-fbb8-4877-a277-4f9a809ac11c"
+        },
+        "workspaceName": {
+            "value": "myAKSLogWorkSpace-99a1e7d2-cab0-45e1-b62b-2df7b3101d90-CIN"
+        },
+        "omsWorkspaceId": {
+            "value": "/subscriptions/99a1e7d2-cab0-45e1-b62b-2df7b3101d90/resourcegroups/defaultresourcegroup-cin/providers/microsoft.operationalinsights/workspaces/myakslogworkspace-99a1e7d2-cab0-45e1-b62b-2df7b3101d90-cin"
+        },
+        "workspaceRegion": {
+            "value": "centralindia"
+        }
+    }
+}
