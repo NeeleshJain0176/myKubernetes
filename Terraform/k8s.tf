@@ -69,3 +69,15 @@ resource "azurerm_kubernetes_cluster" "k8s" {
         Environment = "Development"
     }
 }
+
+resource "azurerm_kubernetes_cluster_node_pool" "mssql" {
+  name                  = "mssql"
+  kubernetes_cluster_id = azurerm_kubernetes_cluster.k8s.id
+  vm_size               = "Standard_B2s"
+  node_count            = 1
+  os_type 
+
+  tags = {
+    Environment = "Production"
+  }
+}
