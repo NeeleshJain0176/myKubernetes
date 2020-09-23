@@ -9,7 +9,7 @@ web:
     name: mvc-app
     tag: 31 # #{Build.BuildId}#
     replicaCount: 1
-  port: 8080
+  port: 80
 sql:
   image:
     fullName: mcr.microsoft.com/mssql/server:2019-latest
